@@ -1,0 +1,8 @@
+<h1>Here are your Restaurants</h1>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %> <%= link_to "Make a review",   new_restaurant_review_path(restaurant) %></li>
+  <% end %>
+</ul>
+
+<i class="fa-solid fa-circle-plus"></i><%= link_to "Create new restaurant", new_restaurant_path %>
